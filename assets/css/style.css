@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+
+  --step--4: clamp(0.58rem, 0.55rem + 0.12vw, 0.64rem);
+  --step--3: clamp(0.69rem, 0.65rem + 0.21vw, 0.8rem);
+  --step--2: clamp(0.75rem, 0.71rem + 0.27vw, 0.9rem);
+  --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1rem);
+
+  --h2: clamp(1rem, 0.0282rem + 3.7559vw, 2rem); /* 2em */
+  --subtitle: clamp(0.4rem, -0.007rem + 1.57vw, 1rem); /* .4em */
+  --hero: clamp(0.625rem, 0.519rem + 0.41vw, 0.781rem); /* 0.75em; */
+  --h4: clamp(0.875rem, 0.722rem + 0.59vw, 1.1rem); /* 1.1em; */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  background: #fff;
+  margin: 50px;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  /* height: fit-content; */
+  /* background: linear-gradient(45deg, #29445a, #69175f); */
+  background: linear-gradient(45deg, #e5e9ec, #29445a, #e5e9ec);
+  padding: 50px;
+}
+
+h2 {
+  font-size: var(--h2);
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 0.7em;
+  letter-spacing: 0.1em;
+}
+
+h2 span {
+  font-size: var(--subtitle);
+  font-weight: 300;
+}
+
+.group {
+  position: relative;
+  display: grid;
+  gap: 40px;
+  width: 100%;
+  grid-template-columns: 2fr 3fr;
+  margin-top: 20px;
+}
+
+.group .imgBx {
+  position: relative;
+  width: 100%;
+}
+
+.group .imgBx img {
+  /* width: 100%; */
+  /* width: clamp(250px, 100%, 800px); */
+  width: clamp(10vw, 100%, 110%);
+}
+
+.group p {
+  font-size: var(--hero);
+  line-height: 1.8;
+  text-align: justify;
+  color: #fff;
+}
+
+.bottom {
+  position: relative;
+  display: grid;
+  margin: 50px 50px 0;
+  gap: 40px;
+  grid-template-columns: 2fr 3fr;
+}
+
+.bottom .left_side {
+  margin-top: 50px;
+}
+
+h4 {
+  font-size: var(--h4);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #fff;
+  /* background: linear-gradient(30deg, #29445a, #69175f, #29445a); */
+  background: linear-gradient(45deg, #e5e9ec, #29445a, #e5e9ec);
+  font-weight: 600;
+  padding: 0 15px;
+  margin-top: 40px;
+  display: inline-flex;
+}
+
+.contactInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.contactInfo li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: var(--step--1);
+}
+
+.contactInfo li a {
+  text-decoration: none;
+}
+
+.contactInfo li .icon {
+  color: #29575a;
+}
+
+.contactInfo li .text {
+  color: #555;
+}
+
+.contactInfo li a span.text:hover {
+  color: #aadadd;
+}
+
+.skills {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.skills .skillsBox {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 3fr;
+}
+
+.skills .skillsBox p {
+  color: #333;
+  font-size: var(--step--1);
+}
+
+.skills .skillsBox .value {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  /* background: #eee; */
+  background: #dbd9d9;
+}
+
+.skills .skillsBox .value::before {
+  content: "";
+  position: absolute;
+  width: var(--i);
+  height: 100%;
+  background: linear-gradient(45deg, #29445a, #69175f);
+}
+
+.skills .value {
+  font-size: var(--step--1);
+}
+
+.adjstMargin {
+  margin-top: -10px;
+}
+
+.edu_group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.edu_groupBx {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.edu_groupBx p:nth-child(1) {
+  font-weight: 500;
+  font-size: var(--step--1);
+}
+
+.edu_groupBx .value b {
+  font-weight: 600;
+  color: #29445a;
+  font-size: var(--step--1);
+}
+
+.edu_groupBx .value b span {
+  position: relative;
+  top: -2px;
+
+  font-size: var(--step--2);
+  color: #666;
+}
+
+.edu_groupBx .value b small {
+  font-size: var(--step--3);
+  color: rgb(41, 68, 90, 0.3);
+}
+
+.edu_groupBx .value b.degree {
+  font-weight: 600;
+  color: rgb(41, 68, 90, 0.75);
+  font-size: var(--step--2);
+}
+
+.edu_groupBx .value p {
+  font-size: var(--hero);
+  color: #bbb;
+}
+
+.edu_groupBx .value p.degree {
+  font-size: var(--step--3);
+  font-weight: 600;
+  color: rgb(41, 68, 90, 0.75);
+}
+
+.edu_groupBx .value p a {
+  text-decoration: none;
+  font-size: var(--step--4);
+  font-weight: 600;
+  color: rgb(41, 68, 90, 0.75);
+}
+
+.edu_groupBx .value p a:hover {
+  color: #aadadd;
+}
+
+.edu_groupBx .value p a span strong {
+  text-decoration: underline;
+}
+
+.edu_groupBx .value li {
+  color: #bbb;
+  font-size: var(--step--3);
+}
+
+.edu_groupBx .value .icon {
+  color: #294429;
+}
+
+.hobbies {
+  padding: 0 50px 50px;
+}
+
+.hobbies ul {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.hobbies ul li {
+  list-style: none;
+  color: #333;
+  width: calc(100% / 5);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #f3f3f3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hobbies ul li:hover {
+  /* background: linear-gradient(30deg, #29445a, #69175f, #29445a); */
+  background: linear-gradient(30deg, #29445a, #69175f, #e5e9ec);
+  color: #fff;
+}
+
+.hobbies ul li i {
+  font-size: var(--h2);
+}
+
+.hobbies ul li p {
+  font-size: var(--step--3);
+}
+
+@media only screen and (max-width: 500px) {
+  .group,
+  .bottom,
+  .skills .skillsBox,
+  .edu_groupBx {
+    grid-template-columns: 1fr;
+  }
+  .top {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+  }
+
+  h4,
+  .bottom,
+  .left_side {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .group {
+    grid-template-columns: 1fr;
+  }
+  .bottom,
+  .skills .skillsBox,
+  .edu_groupBx {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+  .group,
+  .bottom {
+    gap: 10px;
+  }
+  .bottom {
+    margin: 50px 10px 0;
+  }
+  .top {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1070px) {
+  .top {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+  }
+}
